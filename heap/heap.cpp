@@ -65,6 +65,7 @@ class Heap {
     }
 };
 
+// this is for 1 based indexing
 void heapify(int arr[], int n, int i) { //  O(logn)
     int largest = i;
     int left = 2*i;
