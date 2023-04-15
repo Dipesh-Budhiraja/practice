@@ -2,7 +2,7 @@
 
 class Solution{
 public:
-    int solve(vector<vector<int>> mat, int i, int j, int &ans) {
+    int solve(vector<vector<int> > mat, int i, int j, int &ans) {
         if (i >= mat.size() || j >= mat[0].size()) {
             return 0;
         }
@@ -20,14 +20,14 @@ public:
         }
     }
 
-    int maxSquare(int n, int m, vector<vector<int>> mat){
+    int maxSquare(int n, int m, vector<vector<int> > mat){
         int ans = 0;
         solve(mat, 0, 0, ans);
         return ans;
     }
 };
 
-int solveMem(vector<vector<int>> &mat, int i, int j, int &ans, vector<vector<int> > &dp) {
+int solveMem(vector<vector<int> > &mat, int i, int j, int &ans, vector<vector<int> > &dp) {
     if (i >= mat.size() || j >= mat[0].size()) {
         return 0;
     }
@@ -49,7 +49,7 @@ int solveMem(vector<vector<int>> &mat, int i, int j, int &ans, vector<vector<int
     }
 }
 
-int maxSquare(int n, int m, vector<vector<int>> mat){
+int maxSquare(int n, int m, vector<vector<int> > mat){
     // int ans = 0;
     // solve(mat, 0, 0, ans);
     // return ans;
@@ -64,7 +64,7 @@ int maxSquare(int n, int m, vector<vector<int>> mat){
 
 
 
-int solveTab(vector<vector<int>> &mat, int &ans) {
+int solveTab(vector<vector<int> > &mat, int &ans) {
     int row = mat.size();
     int col = mat[0].size();
     vector<vector<int> > dp(row+1, vector<int>(col+1, 0));
@@ -85,7 +85,7 @@ int solveTab(vector<vector<int>> &mat, int &ans) {
     }
 }
 
-int maxSquare(int n, int m, vector<vector<int>> mat){
+int maxSquare(int n, int m, vector<vector<int> > mat){
     // int ans = 0;
     // solve(mat, 0, 0, ans);
     // return ans;
