@@ -6,9 +6,11 @@ public:
         if (i == prices.size()) {
             return 0;
         }
+
         if (rem_txn <= 0) {
             return 0;
         }
+
         if (dp[i][buy][rem_txn] != -1) {
             return dp[i][buy][rem_txn];
         }
@@ -25,8 +27,8 @@ public:
         return dp[i][buy][rem_txn] = profit;
     }
 
-    int maxProfit(vector<int>& prices) {
-        vector<vector<vector<int> > >dp(prices.size(), vector<vector<int> >(2, vector<int>(3, -1)));
-        return solve(0, 1, 2, prices, dp);
+    int maxProfit(int k, vector<int>& prices) {
+        vector<vector<vector<int> > >dp(prices.size(), vector<vector<int> >(2, vector<int>(k+1, -1)));
+        return solve(0, 1, k, prices, dp);
     }
 };
