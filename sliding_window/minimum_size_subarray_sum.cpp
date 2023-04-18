@@ -9,12 +9,10 @@ public:
         for (int r = 0; r < nums.size(); r++) {
             sum += nums[r];
 
-            if (sum >= target) {
-                while (sum >= target) {
-                    ans = min(ans, r-l+1);
-                    sum -= nums[l];
-                    l++;
-                }
+            while (sum >= target) {
+                ans = min(ans, r-l+1);
+                sum -= nums[l];
+                l++;
             }
         }
 
