@@ -1,4 +1,4 @@
-using namespace std;
+#include "header.h"
 
 class Solution {
 public:
