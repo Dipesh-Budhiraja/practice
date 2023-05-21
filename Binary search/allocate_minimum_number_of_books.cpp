@@ -1,6 +1,8 @@
 #include <iostream>
 using namespace std;
 
+// YE KYA BAKWAAS LIKHI HAI - BINARY SEARCH SE KARO
+
 int allocate_min(int *arr, int n, int k, int index) {
 
     if (k == 1) {
